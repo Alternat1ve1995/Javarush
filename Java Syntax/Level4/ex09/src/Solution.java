@@ -1,0 +1,19 @@
+
+/* 
+Попадём-не-попадём
+*/
+
+public class Solution {
+	public static void main(String[] args) {
+		checkInterval(60);
+		checkInterval(112);
+	}
+
+	public static void checkInterval(int a) {
+
+		if (a > 49 && a < 101)
+			System.out.println("Число " + a + " содержится в интервале.");
+		else
+			System.out.println("Число " + a + " не содержится в интервале.");
+	}
+}
