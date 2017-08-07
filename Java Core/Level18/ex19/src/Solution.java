@@ -25,6 +25,7 @@ public class Solution {
 		while (fileInputStream.available() > 0) {
 
 			char	c;
+
 			while (fileInputStream.available() > 0 && (c = (char)fileInputStream.read()) != ' ')
 				num.append(c);
 			d_arr.add(Double.parseDouble(num.toString()));
@@ -32,6 +33,7 @@ public class Solution {
 		}
 
 		for (Double n : d_arr) {
+
 			double	nb = n;
 			int		res;
 
