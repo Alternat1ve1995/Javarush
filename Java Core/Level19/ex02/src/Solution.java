@@ -50,7 +50,10 @@ public class Solution {
 			StringBuilder	s = new StringBuilder("+");
 
 			s.append(data.getCountryPhoneCode());
-			s.append("0" + data.getPhoneNumber());
+			if (s.length() < 4)
+				while (s.length() < 4)
+					s.append('0');
+			s.append(data.getPhoneNumber());
 			s.insert(3, '(');
 			s.insert(7, ')');
 			s.insert(11, '-');
