@@ -1,4 +1,5 @@
 
+import java.io.FileReader;
 import java.util.Properties;
 
 /*
@@ -18,6 +19,17 @@ public class Solution {
 	}
 
 	public Properties getProperties(String fileName) {
-		return null;
+
+		Properties	properties = new Properties();
+
+		try
+		{
+			properties.load(new FileReader(fileName));
+		}
+		catch (Exception e)
+		{
+			return (null);
+		}
+		return (properties);
 	}
 }
